@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Object detector</string>
+    <array name="models">
+        <item>Efficientdet0</item>
+        <item>Efficientdet3</item>
+        <item>Efficientdet4</item>
+        <item>Mobile Object Localizer V1</item>
+    </array>
+</resources>

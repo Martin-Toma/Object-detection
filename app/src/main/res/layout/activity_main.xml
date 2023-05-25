@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <!--ImageView
+        android:id="@+id/passed_pic"
+        android:layout_width=""
+        android:layout_height="200"
+        android:src="@drawable/ic_launcher_background"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/parentLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" /-->
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="15sp"
+        android:textColor="#00FF00"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/parentLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/wholeTime"
+        app:layout_constraintBottom_toTopOf="@id/inferenceTime"
+        android:paddingTop="50dp"
+        android:paddingBottom="25dp"/>
+    <TextView
+        android:id="@+id/inferenceTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="15sp"
+        android:textColor="#00FF00"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/avgInferenceTime"
+        android:paddingBottom="25dp"/>
+    <TextView
+        android:id="@+id/wholeTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="15sp"
+        android:textColor="#00FF00"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/parentLayout"
+        app:layout_constraintStart_toEndOf="@id/time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/inferenceTime"
+        android:paddingTop="50dp"
+        android:paddingBottom="25dp"/>
+    <TextView
+        android:id="@+id/avgInferenceTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="15sp"
+        android:textColor="#00FF00"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/inferenceTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="50dp"/>
+
+
+    <Spinner
+        android:id="@+id/models"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/models"
+        app:layout_constraintTop_toBottomOf="@id/parentLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="50dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
