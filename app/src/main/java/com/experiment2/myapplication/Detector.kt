@@ -113,7 +113,7 @@ class Detector(contextn : Context) {
 
                     values.removeAt(0)
                 }
-                sum = sum / values.lastIndex
+                sum = sum / 20
                 binding.avgInferenceTime.setText("Avg.infer. "+sum.toString()+"ms")
                 val outIter = outputs.detectionResultList.iterator()
                 while (binding.parentLayout.childCount > 1) {
@@ -171,7 +171,7 @@ class Detector(contextn : Context) {
 
                     values.removeAt(0)
                 }
-                sum = sum / values.lastIndex
+                sum = sum / 20
                 binding.avgInferenceTime.setText("Avg.infer. "+sum.toString()+"ms")
                 val outIter = outputs.detectionResultList.iterator()
                 while (binding.parentLayout.childCount > 1) {
@@ -229,7 +229,7 @@ class Detector(contextn : Context) {
 
                     values.removeAt(0)
                 }
-                sum = sum / values.lastIndex
+                sum = sum / 20
                 binding.avgInferenceTime.setText("Avg.infer. "+sum.toString()+"ms")
                 val outIter = outputs.detectionResultList.iterator()
                 while (binding.parentLayout.childCount > 1) {
@@ -287,7 +287,7 @@ class Detector(contextn : Context) {
 
                     values.removeAt(0)
                 }
-                sum = sum / values.lastIndex
+                sum = sum / 20
                 binding.avgInferenceTime.setText("Avg.infer. "+sum.toString()+"ms")
                 val outIter = outputs.detectionResultList.iterator()
                 while (binding.parentLayout.childCount > 1) {
